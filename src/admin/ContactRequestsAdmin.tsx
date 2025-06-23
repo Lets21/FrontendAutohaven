@@ -11,6 +11,7 @@ interface ContactMessage {
   message: string;
   createdAt: string;
 }
+const API_URL = import.meta.env.VITE_API_URL || "https://backendautohaven.onrender.com";
 
 const ContactRequestsAdmin: React.FC = () => {
   const [messages, setMessages] = useState<ContactMessage[]>([]);
@@ -20,7 +21,7 @@ const ContactRequestsAdmin: React.FC = () => {
   // Cargar mensajes desde el backend
   useEffect(() => {
     setLoading(true);
-    fetch("https://backendautohaven.onrender.com", {
+    fetch(`${API_URL}/api/contact`, {
 
       headers: {
         Authorization: `Bearer ${localStorage.getItem("admin_session") || ""}`
@@ -47,7 +48,7 @@ const ContactRequestsAdmin: React.FC = () => {
 
             const deletingToast = toast.loading("Eliminando mensaje...");
             try {
-              const res = await fetch(`http://localhost:5000/api/contact/${id}`, {
+              const res = await fetch(`${API_URL}/api/contact/${id}`, {
                 method: "DELETE",
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem("admin_session") || ""}`

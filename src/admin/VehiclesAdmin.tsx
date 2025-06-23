@@ -51,7 +51,8 @@ const initialVehicle: Omit<Vehicle, '_id' | 'images'> & { images?: Image[] } = {
 const FUEL_TYPES = ["Gasoline", "Diesel", "Hybrid", "Electric"] as const;
 const TRANSMISSION_TYPES = ["Manual", "Automatic"] as const;
 
-const API_URL = "https://backendautohaven.onrender.com";
+const API_URL = import.meta.env.VITE_API_URL;
+
 
 const VehiclesAdmin: React.FC = () => {
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);

@@ -3,7 +3,7 @@ import SectionTitle from "../components/ui/SectionTitle";
 import Button from "../components/ui/Button";
 import toast from "react-hot-toast";
 
-const API_URL = 'https://backendautohaven.onrender.com';
+const API_URL = import.meta.env.VITE_API_URL;
 
 const initialForm = {
   sellerName: "",

@@ -8,7 +8,7 @@ import VehicleSpecs from "../components/vehicle/VehicleSpecs";
 import ContactForm from "../components/forms/ContactForm";
 import VehicleCard from "../components/ui/VehicleCard";
 
-const API_URL = 'https://backendautohaven.onrender.com';
+const API_URL = import.meta.env.VITE_API_URL;
 
 interface VehicleImage {
   id: string;

@@ -23,7 +23,7 @@ interface SaleRequest {
   status?: "pending" | "reviewed" | "approved" | "rejected";
   createdAt: string;
 }
-
+const API_URL = import.meta.env.VITE_API_URL;
 const fallbackImg = "/no-image.png"; // Pon este archivo en /public
 
 const statusColor = {
@@ -40,7 +40,8 @@ const SaleRequestsAdmin: React.FC = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("https://backendautohaven.onrender.com", {
+    fetch(`${API_URL}/api/sales`, {
+
       headers: {
         Authorization: `Bearer ${localStorage.getItem("admin_session") || ""}`,
       },
@@ -64,7 +65,7 @@ const SaleRequestsAdmin: React.FC = () => {
               toast.dismiss(t.id);
               const deletingToast = toast.loading("Eliminando solicitud...");
               try {
-                const res = await fetch(`http://localhost:5000/api/sales/${id}`, {
+                const res = await fetch(`${API_URL}/api/sales/${id}`, {
                   method: "DELETE",
                   headers: {
                     Authorization: `Bearer ${localStorage.getItem("admin_session") || ""}`,

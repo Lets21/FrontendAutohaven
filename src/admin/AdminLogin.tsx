@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "https://backendautohaven.onrender.com";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const AdminLogin: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -13,7 +13,7 @@ const AdminLogin: React.FC = () => {
     e.preventDefault();
     setError("");
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch(`${API_URL}/api/admin/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password: pass }),

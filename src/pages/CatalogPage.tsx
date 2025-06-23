@@ -33,7 +33,7 @@ const defaultFilters: Filters = {
   priceRange: [0, 100000],
 };
 
-const API_URL = 'https://backendautohaven.onrender.com';
+const API_URL = import.meta.env.VITE_API_URL;
 
 const CatalogPage: React.FC = () => {
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
