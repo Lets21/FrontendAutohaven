@@ -40,7 +40,7 @@ const SaleRequestsAdmin: React.FC = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:5000/api/sales", {
+    fetch("https://backendautohaven.onrender.com", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("admin_session") || ""}`,
       },

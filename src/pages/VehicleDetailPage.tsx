@@ -8,7 +8,7 @@ import VehicleSpecs from "../components/vehicle/VehicleSpecs";
 import ContactForm from "../components/forms/ContactForm";
 import VehicleCard from "../components/ui/VehicleCard";
 
-const API_URL = 'http://192.168.1.7:5000';
+const API_URL = 'https://backendautohaven.onrender.com';
 
 interface VehicleImage {
   id: string;

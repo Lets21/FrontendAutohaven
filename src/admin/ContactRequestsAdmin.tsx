@@ -20,7 +20,7 @@ const ContactRequestsAdmin: React.FC = () => {
   // Cargar mensajes desde el backend
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:5000/api/contact", {
+    fetch("https://backendautohaven.onrender.com", {
 
       headers: {
         Authorization: `Bearer ${localStorage.getItem("admin_session") || ""}`

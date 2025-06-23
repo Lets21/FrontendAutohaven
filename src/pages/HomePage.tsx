@@ -6,7 +6,7 @@ import SectionTitle from '../components/ui/SectionTitle';
 import VehicleCard from '../components/ui/VehicleCard';
 import { Car, Award, PiggyBank, Users } from 'lucide-react';
 
-const API_URL = 'http://192.168.1.7:5000';
+const API_URL = 'https://backendautohaven.onrender.com';
 
 interface Vehicle {
   _id: string;
