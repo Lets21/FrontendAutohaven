@@ -1,0 +1,20 @@
+{
+  "home": "Inicio",
+  "catalog": "Catálogo",
+  "about": "Acerca de",
+  "contact": "Contacto",
+  "sell": "Vende tu auto",
+
+  "footer.company_info": "En AutoHaven AS, nos comprometemos a ofrecer vehículos de calidad con total transparencia y el mejor servicio al cliente.",
+  "footer.contact": "Contacto",
+  "footer.address": "Viksletta 109, 1789 Halden",
+  "footer.phone": "92 92 92 46",
+  "footer.email": "AutoHavenAS@hotmail.com",
+  "footer.org_number": "Núm. de Org: 934 985 540",
+  "footer.quick_links": "Enlaces rápidos",
+  "footer.home": "Inicio",
+  "footer.vehicle_catalog": "Catálogo de Vehículos",
+  "footer.about_us": "Sobre Nosotros",
+  "footer.sell_your_car": "Vende tu auto",
+  "footer.rights_reserved": "Todos los derechos reservados."
+}
