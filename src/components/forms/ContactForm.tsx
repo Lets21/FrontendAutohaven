@@ -16,6 +16,7 @@ interface FormData {
   subject?: string;
   message: string;
 }
+const API_URL = import.meta.env.VITE_API_URL;
 
 const ContactForm: React.FC<ContactFormProps> = ({ vehicleId, vehicleTitle, subject }) => {
   const {
@@ -41,7 +42,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ vehicleId, vehicleTitle, subj
 
   const onSubmit = async (data: FormData) => {
     try {
-      const response = await fetch('http://192.168.1.167:5000/api/contact', {
+      const response = await fetch(`${API_URL}/api/contact`, {
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
