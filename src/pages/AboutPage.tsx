@@ -17,12 +17,10 @@ const AboutPage: React.FC = () => {
           <div>
             <h3 className="text-2xl font-semibold text-white mb-4">Vår Historie</h3>
             <p className="text-gray-300 mb-4">
-              Et tiar med lidenskap for bil og kundeservice
-Hos AutoHaven AS handler det ikke bare om biler - det handler om mennesker, tillit og trygghet. Vi har over 10 ärs erfaring i bilbransjen, og gjennom ärene har vi solgt og händtert alle typer biler og bilmerker - fra smá bybiler til store premiumbiler.
-Vär reise startet med én ting til felles: en genuin lidenskap for bil, og et anske om à giare kjap og salg av bruktbil enklere, tryggere og mer transparent. Da vi etablerte AutoHaven AS i 2015, var málet á være en akter folk kunne stole pä - og det stär vi fortsatt for i dag.
-Vi vet at det à kjepe eller selge bil kan oppleves bäde spennende og overveldende. Derfor er vi med deg hele veien gjennom prosessen - uansett om du ensker à finne dremmebilen, eller trenger hjelp med à selge bilen din videre. Vi tilbyr ogsà profesjonell formidling av bilsalg pà vegne av kunder, i allé prisklasser.
-Med hundrevis av forneyde kunder og et rykte bygget pá ápenhet, erfaring og personlig oppfalging, er vi stolte av à væere en solid og profesjonell akter i Halden - og et trygt valg for ditt neste bilbytte.
-Velkommen til AutoHaven AS - vi kan det à kispe og selge bil.
+              AutoHaven AS – Trygt, ryddig og fleksibelt bilsalg for alle
+Hos AutoHaven AS er vi dedikert til formidling og salg av brukte kjøretøy i alle prisklasser – både våre egne og på vegne av andre.
+Vi legger stor vekt på åpenhet, tillit og kvalitet i alt vi gjør. Alle biler som selges gjennom oss går gjennom en grundig inspeksjons- og klargjøringsprosess for å sikre at de møter høye krav til sikkerhet, teknisk tilstand og presentasjon.
+Enten du ønsker å kjøpe, selge eller få bilen din formidlet profesjonelt – står vi klare til å hjelpe deg med en trygg og effektiv løsning.
             </p>
             <p className="text-gray-300 mb-4">
               Gjennom årene har vi bygget et solid rykte basert på tillit og enestående service. 

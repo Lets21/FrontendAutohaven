@@ -59,17 +59,7 @@ const HomePage: React.FC = () => {
 
               <p className="text-xl text-gray-300 mb-8">
                   Har du en bil du vil bli kvitt? Vi kjøper den – uansett pris, tilstand eller kilometerstand!
-
 Enten det er en nyere bil, eldre modell, EU-klar eller ikke – vi tar imot alle typer biler. Rask vurdering og oppgjør, enkelt og trygt.
-Finn ditt neste kjøretøy – med trygghet og kvalitet du kan stole på
-Hos oss får du tilgang til et nøye utvalgt sortiment av kvalitetsbiler, kombinert med full åpenhet, førsteklasses kundeservice og garanti du kan stole på.
-Vi gjør bilkjøpet enkelt, trygt og til å stole på – akkurat slik det bør være.
-AutoHaven AS – Trygt, ryddig og fleksibelt bilsalg for alle
-Hos AutoHaven AS er vi dedikert til formidling og salg av brukte kjøretøy i alle prisklasser – både våre egne og på vegne av andre.
-
-Vi legger stor vekt på åpenhet, tillit og kvalitet i alt vi gjør. Alle biler som selges gjennom oss går gjennom en grundig inspeksjons- og klargjøringsprosess for å sikre at de møter høye krav til sikkerhet, teknisk tilstand og presentasjon.
-
-Enten du ønsker å kjøpe, selge eller få bilen din formidlet profesjonelt – står vi klare til å hjelpe deg med en trygg og effektiv løsning.
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -92,16 +82,15 @@ Enten du ønsker å kjøpe, selge eller få bilen din formidlet profesjonelt –
       <section className="bg-gray-900 py-16">
         <div className="container mx-auto px-4">
           <SectionTitle 
-            title="AutoHaven AS - Trygt, ryddig og fleksibelt bilsalg for alle" 
+            title="Finn ditt neste kjøretøy – med trygghet og kvalitet du kan stole på" 
             subtitle=""
             centered
           />
 
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-gray-300 mb-8">
-              Hos AutoHaven AS er vi dedikert til formidling og salg av brukte kjeretey i alle prisklasser - bäde väre egne og pá vegne av andre.
-Vi legger stor vekt pá âpenhet, tillit og kvalitet i alt vi giar. Alle biler som selges gjennom oss gär giennom en grundig inspeksions- og klargiaringsprosess for à sikre at de mater haye krav til sikkerhet, teknisk tilstand og presentasjon.
-Enten du ensker à kjope, selge eller fà bilen din formidlet profesjoneit - stár vi klare til à hjelpe deg med en trygg og effektiv lesning.
+             Hos oss får du tilgang til et nøye utvalgt sortiment av kvalitetsbiler, kombinert med full åpenhet, førsteklasses kundeservice og garanti du kan stole på.
+Vi gjør bilkjøpet enkelt, trygt og til å stole på – akkurat slik det bør være.
             </p>
             <Button variant="secondary">
               <Link to="/nosotros">Les Vår Historie</Link>
