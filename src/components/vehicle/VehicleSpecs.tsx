@@ -35,7 +35,7 @@ const VehicleSpecs: React.FC<VehicleSpecsProps> = ({
       {/* Price */}
       <div className="mb-6 p-4 bg-gray-700 rounded-lg">
         <h3 className="text-lg text-gray-300 mb-1">Pris</h3>
-        <p className="text-3xl font-bold text-white">€ {price.toLocaleString()}</p>
+        <p className="text-3xl font-bold text-white">NOK {price.toLocaleString()}</p>
       </div>
 
       {/* Key Specs */}
