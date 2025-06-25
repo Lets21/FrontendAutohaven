@@ -81,11 +81,11 @@ const VehicleSpecs: React.FC<VehicleSpecsProps> = ({
             </div>
             <div className="flex justify-between p-3 bg-gray-700 rounded">
               <span className="text-gray-300">Sist Godkjent</span>
-              <span className="text-white font-medium">{lastInspectionDate}</span>
+              <span className="text-white font-medium">{lastInspectionDate ? new Date(lastInspectionDate).toLocaleDateString('no-NO') : ''}</span>
             </div>
             <div className="flex justify-between p-3 bg-gray-700 rounded">
               <span className="text-gray-300">Neste EU-kontroll</span>
-              <span className="text-white font-medium">{nextInspectionDate}</span>
+              <span className="text-white font-medium">{nextInspectionDate ? new Date(nextInspectionDate).toLocaleDateString('no-NO') : ''}</span>
             </div>
           </div>
         </div>
