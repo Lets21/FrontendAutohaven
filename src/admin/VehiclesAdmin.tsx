@@ -15,7 +15,7 @@ interface Vehicle {
   price: number;
   images: Image[];
   mileage: number;
-  fuel: 'Gasoline' | 'Diesel' | 'Hybrid' | 'Electric';
+  fuel: 'Bensin' | 'Diesel' | 'Hybrid' | 'Electric';
   transmission: 'Manual' | 'Automatic';
   power: number;
   interiorCondition: string;
@@ -36,7 +36,7 @@ const initialVehicle: Omit<Vehicle, '_id' | 'images'> & { images?: Image[] } = {
   year: new Date().getFullYear(),
   price: 0,
   mileage: 0,
-  fuel: "Gasoline",
+  fuel: "Bensin",
   transmission: "Manual",
   power: 0,
   interiorCondition: "",
@@ -48,7 +48,7 @@ const initialVehicle: Omit<Vehicle, '_id' | 'images'> & { images?: Image[] } = {
   featured: false,
 };
 
-const FUEL_TYPES = ["Gasoline", "Diesel", "Hybrid", "Electric"] as const;
+const FUEL_TYPES = ["Bensin", "Diesel", "Hybrid", "Electric"] as const;
 const TRANSMISSION_TYPES = ["Manual", "Automatic"] as const;
 
 const API_URL = import.meta.env.VITE_API_URL;

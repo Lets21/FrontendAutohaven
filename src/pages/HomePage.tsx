@@ -54,11 +54,12 @@ const HomePage: React.FC = () => {
               </div>
 
               <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-                Finn ditt ideelle kjøretøy med garantien og tilliten du fortjener
+                VIKJOPER ALLE BILER - UANSETT PRIS! 
               </h2>
 
               <p className="text-xl text-gray-300 mb-8">
-                  Et utvalg av kjøretøy av høy kvalitet med full åpenhet og den beste servicen.
+                  Har du en bil du vil bli lvita Mi kieper den - uansett pris, tilstand eller kilometerstand.
+                  Enten det er en nyere bil/eldre modell, EU-klar eller ikke - vi tar imot alle typer biler. Rask vurdering ol oppgier, enkelt og trygti
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -81,16 +82,16 @@ const HomePage: React.FC = () => {
       <section className="bg-gray-900 py-16">
         <div className="container mx-auto px-4">
           <SectionTitle 
-            title="Om AutoHaven AS" 
+            title="AutoHaven AS - Trygt, ryddig og fleksibelt bilsalg for alle" 
             subtitle=""
             centered
           />
 
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-gray-300 mb-8">
-              Hos AutoHaven AS er vi dedikert til salg av brukte kjøretøy med full åpenhet.
-  Hvert av våre kjøretøy går gjennom en grundig inspeksjonsprosess for å sikre at det oppfyller 
-  de høyeste standardene for kvalitet og sikkerhet.
+              Hos AutoHaven AS er vi dedikert til formidling og salg av brukte kjeretey i alle prisklasser - bäde väre egne og pá vegne av andre.
+Vi legger stor vekt pá âpenhet, tillit og kvalitet i alt vi giar. Alle biler som selges gjennom oss gär giennom en grundig inspeksions- og klargiaringsprosess for à sikre at de mater haye krav til sikkerhet, teknisk tilstand og presentasjon.
+Enten du ensker à kjope, selge eller fà bilen din formidlet profesjoneit - stár vi klare til à hjelpe deg med en trygg og effektiv lesning.
             </p>
             <Button variant="secondary">
               <Link to="/nosotros">Les Vår Historie</Link>
