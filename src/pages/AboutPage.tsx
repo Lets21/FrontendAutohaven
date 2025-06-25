@@ -36,7 +36,7 @@ Enten du ønsker å kjøpe, selge eller få bilen din formidlet profesjonelt –
           <div className="relative rounded-lg overflow-hidden h-80 md:h-auto">
             {/* Imagen de showroom como fondo semi-oscuro */}
             <img
-              src="https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg"
+              //src="https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg"
               alt="AutoHaven Showroom"
               className="w-full h-full object-cover"
             />
