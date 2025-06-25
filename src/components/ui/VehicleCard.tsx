@@ -56,7 +56,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
           <p className="text-sm text-gray-400 mb-3">{version} • {year}</p>
           <div className="flex justify-between items-center">
             <span className="text-xl font-bold text-white">
-              € {price.toLocaleString()}
+              NOK {price.toLocaleString()}
             </span>
             <span className="text-xs text-gray-400 bg-gray-700 py-1 px-2 rounded">
               Detaljer
