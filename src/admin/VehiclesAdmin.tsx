@@ -421,7 +421,7 @@ const handleSave = async (e: React.FormEvent) => {
                       required />
                   </div>
                   <div>
-                    <label className="text-gray-300 block mb-1">Skadehistorikk</label>
+                    <label className="text-gray-300 block mb-1">Beskrivelse</label>
                     <input className="w-full p-2 rounded bg-gray-800 text-white"
                       value={form.damageHistory}
                       onChange={e => setForm(f => ({ ...f, damageHistory: e.target.value }))}

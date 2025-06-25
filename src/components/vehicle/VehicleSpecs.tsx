@@ -92,7 +92,7 @@ const VehicleSpecs: React.FC<VehicleSpecsProps> = ({
 
         {damageHistory && (
           <div>
-            <h3 className="text-lg font-semibold text-white mb-3">Skadehistorikk</h3>
+            <h3 className="text-lg font-semibold text-white mb-3">Beskrivelse</h3>
             <div className="p-4 bg-gray-700 rounded-lg">
               <p className="text-gray-300">{damageHistory}</p>
             </div>
