@@ -13,8 +13,8 @@ i18n
       es: { translation: translationES },
       no: { translation: translationNO }
     },
-    lng: 'es', // Idioma por defecto
-    fallbackLng: 'es',
+    lng: 'no', // Idioma por defecto
+    fallbackLng: 'no',
     interpolation: { escapeValue: false }
   });
 
