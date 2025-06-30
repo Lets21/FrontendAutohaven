@@ -107,11 +107,10 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div
-            className={`fixed inset-0 ${
-              isHome ? "bg-transparent" : "bg-gray-800"
-            } z-40 transform transition-transform duration-200 ease-in-out md:hidden pt-16`}
-          >
+            <div
+              className="fixed inset-0 bg-gray-900 bg-opacity-95 z-50 flex flex-col md:hidden pt-16"
+            >
+
             <div className="flex flex-col space-y-6 p-6">
               <Link to="/" className="text-2xl font-medium text-gray-200 hover:text-white transition-colors" onClick={closeMenu}>
                 {t("home")}
