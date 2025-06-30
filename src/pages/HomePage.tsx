@@ -61,12 +61,11 @@ const HomePage: React.FC = () => {
                   Har du en bil du vil bli kvitt? Vi kjøper den – uansett pris, tilstand eller kilometerstand!
 Enten det er en nyere bil, eldre modell, EU-klar eller ikke – vi tar imot alle typer biler. Rask vurdering og oppgjør, enkelt og trygt.
               </p>
-
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button variant="primary" size="lg" className="w-full sm:w-auto">
                   <Link to="/catalogo">Kjøretøy</Link>
                 </Button>
-                {/* <-- AQUÍ el botón destacado --> */}
+                {/* Botón destacado */}
                 <Button
                   variant="secondary"
                   size="lg"
@@ -77,7 +76,18 @@ Enten det er en nyere bil, eldre modell, EU-klar eller ikke – vi tar imot alle
                 <Button variant="secondary" size="lg" className="w-full sm:w-auto">
                   <Link to="/contacto">Kontakt Oss</Link>
                 </Button>
+                {/* Botón Finn-Annonser */}
+                <a
+    href="https://www.finn.no/mobility/search/car?orgId=4579290&stored-id=79203714"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full sm:w-auto px-6 py-3 rounded-lg border-2 border-blue-800 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl shadow-xl transition-all duration-200 flex items-center justify-center"
+    style={{ minHeight: '48px' }} // Igualar altura si Button tiene min-h
+  >
+    Finn-Annonser
+  </a>
               </div>
+
 
             </motion.div>
           </div>
