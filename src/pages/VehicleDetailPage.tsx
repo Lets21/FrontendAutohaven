@@ -34,6 +34,7 @@ interface Vehicle {
   nextInspectionDate?: string;
   price: number;
   images: VehicleImage[];
+  sold?: boolean;
 }
 
 const VehicleDetailPage: React.FC = () => {
@@ -112,12 +113,20 @@ const VehicleDetailPage: React.FC = () => {
           </span>
         </div>
 
-        {/* Vehicle Title */}
-        <SectionTitle
-          title={`${vehicle.brand} ${vehicle.model} ${vehicle.version}`}
-          subtitle={`${vehicle.year} • ${vehicle.mileage?.toLocaleString()} km • ${vehicle.fuel}`}
-          className="mb-8"
-        />
+        <div className="flex items-center gap-3 mb-2">
+  <h1 className="text-3xl font-bold">
+    {vehicle.brand} {vehicle.model} {vehicle.version}
+  </h1>
+  {vehicle.sold && (
+    <span className="bg-red-600 text-white text-xs font-bold py-1 px-3 rounded shadow tracking-widest">
+      Solgt
+    </span>
+  )}
+</div>
+<p className="text-lg text-gray-300 mb-8">
+  {vehicle.year} • {vehicle.mileage?.toLocaleString()} km • {vehicle.fuel}
+</p>
+
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
           {/* Gallery */}
@@ -183,6 +192,7 @@ const VehicleDetailPage: React.FC = () => {
                   version={similar.version}
                   year={similar.year}
                   price={similar.price}
+                  sold={similar.sold} 
                 />
               ))}
             </div>
