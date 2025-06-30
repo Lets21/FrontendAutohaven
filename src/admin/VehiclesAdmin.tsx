@@ -192,8 +192,16 @@ const handleSave = async (e: React.FormEvent) => {
   data.append("exteriorCondition", form.exteriorCondition);
   data.append("damageHistory", form.damageHistory);
   data.append("maintenanceHistory", JSON.stringify(form.maintenanceHistory));
-  data.append("lastInspectionDate", form.lastInspectionDate);
-  data.append("nextInspectionDate", form.nextInspectionDate);
+
+  // --- BLOQUE NUEVO ---
+  const safeLastInspection = form.lastInspectionDate?.substring(0, 10) || today;
+  const safeNextInspection = form.nextInspectionDate?.substring(0, 10) || today;
+  console.log('lastInspectionDate:', safeLastInspection);
+  console.log('nextInspectionDate:', safeNextInspection);
+  data.append("lastInspectionDate", safeLastInspection);
+  data.append("nextInspectionDate", safeNextInspection);
+  // ----------------------
+
   data.append("featured", form.featured ? "true" : "false");
 
   // Imágenes NUEVAS (sólo si hay nuevas)
