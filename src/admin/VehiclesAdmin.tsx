@@ -503,7 +503,7 @@ const handleSave = async (e: React.FormEvent) => {
                 className="mr-2 accent-amber-400 scale-125"
               />
               <label htmlFor="sold" className="text-gray-300 font-semibold select-none">
-                Marcar como "VENDIDO" (Solgt)
+                Merk som «SOLGT»
               </label>
             </div>
 

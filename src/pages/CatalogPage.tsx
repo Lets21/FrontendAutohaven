@@ -184,6 +184,7 @@ useEffect(() => {
                     version={vehicle.version}
                     year={vehicle.year}
                     price={vehicle.price}
+                    sold={vehicle.sold}
                   />
                 ))}
               </div>
