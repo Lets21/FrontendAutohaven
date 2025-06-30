@@ -64,15 +64,21 @@ Enten det er en nyere bil, eldre modell, EU-klar eller ikke – vi tar imot alle
 
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button variant="primary" size="lg" className="w-full sm:w-auto">
-                  <Link to="/catalogo">Se Katalogen</Link>
+                  <Link to="/catalogo">Kjøretøy</Link>
+                </Button>
+                {/* <-- AQUÍ el botón destacado --> */}
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  className="w-full sm:w-auto text-xl font-bold bg-yellow-400 hover:bg-yellow-500 text-gray-900 shadow-xl border-2 border-yellow-500 transition-all duration-200"
+                >
+                  <Link to="/sell-your-car">Selg Bilen Din</Link>
                 </Button>
                 <Button variant="secondary" size="lg" className="w-full sm:w-auto">
                   <Link to="/contacto">Kontakt Oss</Link>
                 </Button>
-                <Button variant="secondary" size="lg" className="w-full sm:w-auto">
-                <Link to="/sell-your-car">Selg Bilen Din</Link>
-              </Button>
               </div>
+
             </motion.div>
           </div>
         </div>
