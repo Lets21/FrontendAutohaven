@@ -4,16 +4,17 @@ import { motion } from 'framer-motion';
 
 interface VehicleCardProps {
   id: string;
-  imageUrl?: string;         // Puede ser una URL o un base64
-  alt?: string;              // Texto alternativo para accesibilidad
+  imageUrl?: string;
+  alt?: string;
   brand: string;
   model: string;
   version: string;
   year: number;
   price: number;
+  sold?: boolean; // <-- NUEVO
 }
 
-const fallbackImg = "/no-image.png"; // Imagen por defecto
+const fallbackImg = "/no-image.png";
 
 const VehicleCard: React.FC<VehicleCardProps> = ({
   id,
@@ -24,6 +25,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
   version,
   year,
   price,
+  sold, // <-- NUEVO
 }) => {
   return (
     <motion.div 
@@ -40,14 +42,18 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
             alt={alt || `Foto de ${brand} ${model}`}
             className="object-cover w-full h-full"
             tabIndex={-1}
-            // Si la imagen falla, muestra el fallback
             onError={e => { 
               e.currentTarget.onerror = null; 
               e.currentTarget.src = fallbackImg; 
             }}
-            // Puedes añadir crossOrigin solo si usas imágenes externas
             crossOrigin={imageUrl?.startsWith('http') ? "anonymous" : undefined}
           />
+          {/* BADGE SOLGT */}
+          {sold && (
+            <span className="absolute top-3 left-3 bg-amber-500 text-white font-bold px-4 py-1 rounded shadow-lg text-lg z-10">
+              Solgt
+            </span>
+          )}
         </div>
         <div className="p-5">
           <h3 className="text-xl font-semibold text-white mb-1">

@@ -25,6 +25,7 @@ interface Vehicle {
   lastInspectionDate: string;
   nextInspectionDate: string;
   featured?: boolean;
+  sold?: boolean;
 }
 
 const today = new Date().toISOString().substring(0, 10);
@@ -46,6 +47,7 @@ const initialVehicle: Omit<Vehicle, '_id' | 'images'> & { images?: Image[] } = {
   lastInspectionDate: today,
   nextInspectionDate: today,
   featured: false,
+  sold: false,  
 };
 
 const FUEL_TYPES = ["Bensin", "Diesel", "Hybrid", "Electric"] as const;
@@ -203,6 +205,8 @@ const handleSave = async (e: React.FormEvent) => {
   // ----------------------
 
   data.append("featured", form.featured ? "true" : "false");
+  data.append("sold", form.sold ? "true" : "false");
+
 
   // Imágenes NUEVAS (sólo si hay nuevas)
   imageFiles.forEach(file => data.append("images", file));
@@ -489,6 +493,19 @@ const handleSave = async (e: React.FormEvent) => {
                   </div>
                 </div>
               </div>
+                    {/* Checkbox para marcar como vendido */}
+            <div className="flex items-center mb-4">  
+              <input
+                type="checkbox"
+                id="sold"
+                checked={!!form.sold}
+                onChange={e => setForm(f => ({ ...f, sold: e.target.checked }))}
+                className="mr-2 accent-amber-400 scale-125"
+              />
+              <label htmlFor="sold" className="text-gray-300 font-semibold select-none">
+                Marcar como "VENDIDO" (Solgt)
+              </label>
+            </div>
 
               <div className="flex justify-end gap-3 mt-8 sticky bottom-0 bg-gray-900 pt-4">
                 <button

@@ -57,11 +57,6 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link to="/catalogo" className={`text-lg ${isActive("/catalogo")} transition-all duration-200`}>
-                {t("catalog")}
-              </Link>
-            </li>
-            <li>
               <Link to="/nosotros" className={`text-lg ${isActive("/nosotros")} transition-all duration-200`}>
                 {t("about")}
               </Link>
@@ -72,10 +67,24 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link to="/sell-your-car" className={`text-lg ${isActive("/sell-your-car")} transition-all duration-200`}>
+              <Link to="/catalogo" className={`text-lg ${isActive("/catalogo")} transition-all duration-200`}>
+                {t("catalog")}
+              </Link>
+            </li>
+            
+            <li>
+              <Link
+                to="/sell-your-car"
+                className={`text-lg font-bold transition-all duration-200 ${
+                  location.pathname === "/sell-your-car"
+                    ? "text-amber-400 border-b-2 border-amber-400"
+                    : "text-amber-400 hover:text-yellow-300"
+                }`}
+              >
                 {t("sell")}
               </Link>
             </li>
+
             <li>
               {/* Selector de idioma con icono */}
               <div className="flex items-center gap-2 ml-4">
