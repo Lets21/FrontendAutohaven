@@ -30,7 +30,7 @@ const defaultFilters: Filters = {
   yearRange: [1990, new Date().getFullYear()],
   fuelTypes: [],
   transmission: [],
-  priceRange: [0, 100000],
+  priceRange: [0, 1000000],
 };
 
 const API_URL = import.meta.env.VITE_API_URL;
