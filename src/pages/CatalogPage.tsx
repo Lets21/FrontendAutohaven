@@ -78,7 +78,7 @@ useEffect(() => {
 
   const allPrices = vehicles.map(v => v.price);
   const priceMin = allPrices.length > 0 ? Math.min(...allPrices) : 0;
-  const priceMax = allPrices.length > 0 ? Math.max(...allPrices) : 100000;
+  const priceMax = allPrices.length > 0 ? Math.max(...allPrices) : 1000000;
 
   const filterOptions = {
     brands,
