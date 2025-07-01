@@ -163,6 +163,13 @@ const VehiclesAdmin: React.FC = () => {
     setImageFiles(prev => prev.filter((_, i) => i !== idx));
     setImagePreviews(prev => prev.filter((_, i) => i !== idx));
   };
+const handleMoveVehicle = (from: number, to: number) => {
+  if (to < 0 || to >= vehicles.length) return;
+  const newVehicles = [...vehicles];
+  [newVehicles[from], newVehicles[to]] = [newVehicles[to], newVehicles[from]];
+  setVehicles(newVehicles);
+  // (Opcional: envía el nuevo orden al backend aquí si quieres persistir)
+};
 
 // Guardar (Crear o Editar)
 const handleSave = async (e: React.FormEvent) => {
@@ -285,7 +292,7 @@ const handleSave = async (e: React.FormEvent) => {
             </tr>
           </thead>
           <tbody>
-            {vehicles.map((vehicle) => (
+            {vehicles.map((vehicle, idx) => (
               <tr key={vehicle._id} className="text-gray-200 hover:bg-gray-700 transition">
                 <td className="px-2 py-2">
                   {vehicle.images && vehicle.images[0]?.url ? (
@@ -300,6 +307,20 @@ const handleSave = async (e: React.FormEvent) => {
                     </div>
                   )}
                 </td>
+                  <td>
+        {/* Botón MOVER ARRIBA */}
+        <button
+          disabled={idx === 0}
+          onClick={() => handleMoveVehicle(idx, idx - 1)}
+          className="mr-2 px-2 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-40"
+        >↑</button>
+        {/* Botón MOVER ABAJO */}
+        <button
+          disabled={idx === vehicles.length - 1}
+          onClick={() => handleMoveVehicle(idx, idx + 1)}
+          className="px-2 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-40"
+        >↓</button>
+      </td>
                 <td className="px-2 py-2 font-semibold">{vehicle.brand}</td>
                 <td className="px-2 py-2">{vehicle.model}</td>
                 <td className="px-2 py-2">{vehicle.version}</td>
