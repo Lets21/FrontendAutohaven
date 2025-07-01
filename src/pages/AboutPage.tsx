@@ -95,7 +95,7 @@ Enten du ønsker å kjøpe, selge eller få bilen din formidlet profesjonelt –
             {/* Aquí insertamos el iframe de Google Maps en lugar de la imagen */}
             <div className="md:col-span-2 bg-gray-800 rounded-lg overflow-hidden h-80">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2156.050296799587!2d11.273525312580732!3d59.1360475263709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46441227125e47a9%3A0x410beff37211063a!2sViksletta%20109%2C%201788%20Halden%2C%20Noruega!5e1!3m2!1no!2no!4v1749051037390!5m2!1no!2no"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2156.050296799587!2d11.273525312580732!3d59.1360475263709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46441227125e47a9%3A0x410beff37211063a!2sViksletta%20109%2C%201788%20Halden%2C%20Norge!5e1!3m2!1no!2no!4v1749051037390!5m2!1no!2no"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -103,7 +103,7 @@ Enten du ønsker å kjøpe, selge eller få bilen din formidlet profesjonelt –
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="AutoHaven AS Location"
-              ></iframe>
+              />
             </div>
 
             {/* Datos de contacto */}
