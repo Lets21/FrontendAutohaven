@@ -105,7 +105,7 @@ Enten det er en nyere bil, eldre modell, EU-klar eller ikke – vi tar imot alle
 
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-gray-300 mb-8">
-             Hos oss får du tilgang til et nøye utvalgt sortiment av kvalitetsbiler, kombinert med full åpenhet, førsteklasses kundeservice og garanti du kan stole på.
+             Hos oss får du tilgang til et nøye utvalgt sortiment av kvalitetsbiler, kombinert med full åpenhet, førsteklasses kundeservice og garanti.
 Vi gjør bilkjøpet enkelt, trygt og til å stole på – akkurat slik det bør være.
             </p>
             <Button variant="secondary">
@@ -202,7 +202,7 @@ Vi gjør bilkjøpet enkelt, trygt og til å stole på – akkurat slik det bør 
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Vårt team er klart til å hjelpe deg med å finne det perfekte kjøretøyet.
-  Besøk vårt showroom eller kontakt oss i dag.
+   Besøk oss eller ta kontakt med oss i dag
           </p>
           <Button variant="primary" size="lg">
             <Link to="/contacto">Kontakt Oss Nå</Link>

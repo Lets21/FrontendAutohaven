@@ -82,7 +82,7 @@ Enten du ønsker å kjøpe, selge eller få bilen din formidlet profesjonelt –
               </div>
               <p className="text-gray-300">
                 Vi er dedikert til å finne det perfekte kjøretøyet for hver kunde, og tar den tiden 
-  som trengs for å forstå deres behov og preferanser.
+  som trengs for å forstå ditt behov og preferanser.
               </p>
             </div>
           </div>
