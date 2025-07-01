@@ -168,8 +168,24 @@ const handleMoveVehicle = (from: number, to: number) => {
   const newVehicles = [...vehicles];
   [newVehicles[from], newVehicles[to]] = [newVehicles[to], newVehicles[from]];
   setVehicles(newVehicles);
-  // (Opcional: envía el nuevo orden al backend aquí si quieres persistir)
+
+  // Enviar orden actualizado al backend
+  const orderedIds = newVehicles.map(v => v._id);
+  fetch(`${API_URL}/api/vehicles/reorder`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${localStorage.getItem("admin_session") || ""}`,
+    },
+    body: JSON.stringify({ orderedIds }),
+  }).then(res => {
+    if (!res.ok) throw new Error("No se pudo actualizar el orden");
+    // Opcional: mostrar toast de éxito
+  }).catch((err) => {
+    // Opcional: mostrar toast de error
+  });
 };
+
 
 // Guardar (Crear o Editar)
 const handleSave = async (e: React.FormEvent) => {
@@ -282,6 +298,7 @@ const handleSave = async (e: React.FormEvent) => {
         <table className="w-full table-auto mb-8 bg-gray-800 rounded-xl shadow">
           <thead>
             <tr className="text-blue-300 text-lg">
+              <th></th> {/* Nueva columna vacía para los botones */}
               <th className="px-2 py-2">Bilde</th>
               <th className="px-2 py-2">Merke</th>
               <th className="px-2 py-2">Modell</th>
@@ -294,6 +311,21 @@ const handleSave = async (e: React.FormEvent) => {
           <tbody>
             {vehicles.map((vehicle, idx) => (
               <tr key={vehicle._id} className="text-gray-200 hover:bg-gray-700 transition">
+                {/* Nueva celda para los botones */}
+                <td>
+                  {/* Botón MOVER ARRIBA */}
+                  <button
+                    disabled={idx === 0}
+                    onClick={() => handleMoveVehicle(idx, idx - 1)}
+                    className="mr-2 px-2 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-40"
+                  >↑</button>
+                  {/* Botón MOVER ABAJO */}
+                  <button
+                    disabled={idx === vehicles.length - 1}
+                    onClick={() => handleMoveVehicle(idx, idx + 1)}
+                    className="px-2 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-40"
+                  >↓</button>
+                </td>
                 <td className="px-2 py-2">
                   {vehicle.images && vehicle.images[0]?.url ? (
                     <img
@@ -307,20 +339,6 @@ const handleSave = async (e: React.FormEvent) => {
                     </div>
                   )}
                 </td>
-                  <td>
-        {/* Botón MOVER ARRIBA */}
-        <button
-          disabled={idx === 0}
-          onClick={() => handleMoveVehicle(idx, idx - 1)}
-          className="mr-2 px-2 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-40"
-        >↑</button>
-        {/* Botón MOVER ABAJO */}
-        <button
-          disabled={idx === vehicles.length - 1}
-          onClick={() => handleMoveVehicle(idx, idx + 1)}
-          className="px-2 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-40"
-        >↓</button>
-      </td>
                 <td className="px-2 py-2 font-semibold">{vehicle.brand}</td>
                 <td className="px-2 py-2">{vehicle.model}</td>
                 <td className="px-2 py-2">{vehicle.version}</td>
