@@ -16,6 +16,7 @@ interface Vehicle {
   year: number;
   price: number;
   images: { url: string }[];
+  sold?: boolean;
 }
 
 const HomePage: React.FC = () => {
@@ -138,6 +139,7 @@ Vi gjør bilkjøpet enkelt, trygt og til å stole på – akkurat slik det bør 
                   version={vehicle.version}
                   year={vehicle.year}
                   price={vehicle.price}
+                  sold={vehicle.sold} 
                 />
               ))
             )}
